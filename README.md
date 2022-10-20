@@ -20,7 +20,7 @@ Django ile kodlanmış bu site yazılımla alakalı bir blog sitesidir. Gelişti
 Öncelikle uygulamanın olduğu ![image](https://user-images.githubusercontent.com/64837576/196895472-b4ba0ec2-812c-4049-8928-e5fff6483730.png)
 kısmından ;
 
-![image](https://user-images.githubusercontent.com/64837576/196895597-0c75d0cd-5a00-4e17-a1b1-27973b91a2ce.png)
+![image](https://user-images.githubusercontent.com/64837576/197022869-1b9f0cc3-3b16-4be9-a55a-7b39e67e0965.png)
 
 clone kısmını kopyalayın . Daha sonra VS code IDE'sinde projeyi açabilirsiniz.
 
