@@ -1,0 +1,16 @@
+.bg{
+    background: linear-gradient(#00ffb3,rgb(55, 52, 255));
+    height: 657px;
+    width: auto;
+}
+
+.arkaplan{
+    background: linear-gradient(rgb(55, 52, 255),#00ffb3);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+
+.ap{
+    background-color:rgb(211, 255, 248);
+}

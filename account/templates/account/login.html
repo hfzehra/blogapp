@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+
+{% block title%} Login {% endblock %}
+
+{% block content %}
+<div class="bg">
+<div class="container ">
+    <div class="container">
+        <div class="row justify-content-center align-items-center ">
+          <div class="col-xl-10 col-lg-12 col-md-9 mb-3 ">
+            <div class="card o-hidden border-0 shadow-lg my-5 col-6 mx-auto ">
+              <div class="card-body p-0 ">
+                <div class="row">
+                  <div class="col">
+                    <div class="p-5 ">
+                        <strong><h1 class="h4 text-gray-900 mb-4 text-center">Welcome Back!</h1></strong>
+                            <h2>Login</h2>
+                                <hr>
+
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    {% if error %}
+                                        <div class="alert alert-danger">
+                                            {{error}}
+                                        </div>
+                                    {% endif %}
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" placeholder="Username" name="username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control"  placeholder="Password"name="password">
+                                    </div>
+                                    <div class="mb-3"></div>
+
+                                <input type="submit" value="Login" class="btn btn-primary">
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>    
+
+{% endblock %}
+
+{% block js_files %} 
+    <script src="{% static 'account/js/script.js' %}"></script>
+{% endblock %}

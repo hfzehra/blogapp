@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+{% endblock %}
+
+
+{% block title%} Homepage{% endblock %}
+
+{% block content %}
+{% include 'partials/_navbar.html' %}
+<div class="container ">
+    <br>
+    <div class="row">
+        <div class="col-md-3 mt-5">
+            <br>
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-md-9">
+            <h1 class="text-light">Homepage</h1>
+            <hr>
+
+            {% for blog in blogs %}
+                {% if blog.is_home and blog.is_active %}
+                    {% include 'blog/partials/_blog.html' %}
+                {% endif %}
+            {% endfor %}
+
+         
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js_files %} 
+    <script src="{% static 'blog/js/script.js' %}"></script>
+{% endblock %}

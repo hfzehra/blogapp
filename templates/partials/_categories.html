@@ -1,0 +1,9 @@
+<div class="list-group ">
+    {% for category in categories %}
+        {% if category.slug == selected_category  %}
+            <a class="list-group-item list-group-item-action arkaplan text-light active" href="{% url 'blogs_by_category' category.slug %}">{{ category.name|title }}</a>
+        {% else %}
+            <a class="list-group-item list-group-item-action text-light arkaplan" href="{% url 'blogs_by_category' category.slug %}">{{ category.name|title }}</a>
+        {% endif %}
+    {% endfor %}
+</div>
